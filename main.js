@@ -1,7 +1,7 @@
 let cityRegister = document.getElementById("city");
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 //  Register Page
-if (window.location.pathname.includes("index")) {
+if (window.location.pathname.endsWith("index.html" || "")) {
   // Variables
   let registerForm = document.querySelector(".register-form");
   let registerBtn = document.querySelector(".register-btn");
@@ -77,7 +77,7 @@ if (window.location.pathname.includes("index")) {
   };
 }
 // Login Page
-if (window.location.pathname.includes("login")) {
+if (window.location.pathname.endsWith("login.html")) {
   // Variables
   let loginForm = document.querySelector(".login-form");
   let loginBtn = document.querySelector(".login-btn");
@@ -122,7 +122,7 @@ if (window.location.pathname.includes("login")) {
     }
   };
 }
-if (window.location.pathname.includes("home")) {
+if (window.location.pathname.endsWith("home.html")) {
   //   bars
   let bars = document.querySelector(".bar");
   let nav = document.querySelector(".nav-menu-alt");
@@ -136,7 +136,7 @@ if (window.location.pathname.includes("home")) {
     }
   };
 }
-if (window.location.pathname.includes("add")) {
+if (window.location.pathname.endsWith("add.html")) {
   let nameDonor = document.querySelector(".name-input");
   let citySelect = document.getElementById("city");
   let emailDonor = document.getElementById("email-input");
@@ -242,7 +242,7 @@ if (window.location.pathname.includes("add")) {
     localStorage.setItem("address", addressDonor.value);
   };
 }
-if (window.location.pathname.includes("donors")) {
+if (window.location.pathname.endsWith("donors.html")) {
   let cityFilter = document.getElementById("city-donors");
   let bloodGroupFilter = document.getElementById("blood-group-donors");
   let searchBtn = document.querySelector(".search-btn");
