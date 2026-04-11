@@ -282,7 +282,7 @@ if (page === "donors.html") {
             <p class="address"><i class="fa-solid fa-location-dot"></i> ${task.city} , ${task.address}</p>
             <p class="phone"><i class="fa-solid fa-phone"></i> ${task.phone}</p>
           </div>
-          <button class="contact-btn" onclick="location.href='tel:${task.phone}'">Contact</button>
+          <button class="contact-btn" onclick="location.href='tel:${task.phone}'">تواصل معه</button>
         </div>
   `;
   });
@@ -323,7 +323,7 @@ if (page === "donors.html") {
             <p class="address"><i class="fa-solid fa-location-dot"></i> ${task.city} , ${task.address}</p>
             <p class="phone"><i class="fa-solid fa-phone"></i> ${task.phone}</p>
           </div>
-          <button class="contact-btn" onclick="location.href='tel:${task.phone}'">Contact</button>
+          <button class="contact-btn" onclick="location.href='tel:${task.phone}'">تواصل معه</button>
         </div>
       `;
       })
