@@ -177,7 +177,7 @@ if (page === "add.html") {
 
   if (localStorage.getItem("gender") == "male") {
     maleInput.checked = true;
-  } else {
+  } else if (localStorage.getItem("gender") == "female") {
     femaleInput.checked = true;
   }
 
