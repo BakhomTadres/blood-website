@@ -1,9 +1,11 @@
 const page = window.location.pathname.split("/").pop();
+
 let cityRegister = document.getElementById("city");
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 //  Register Page
 if (page === "" || page === "index.html") {
   // Variables
+  console.log(page)
   let registerForm = document.querySelector(".register-form");
   let registerBtn = document.querySelector(".register-btn");
   let nameInput = document.querySelector(".name-input");

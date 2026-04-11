@@ -10,7 +10,7 @@
   --hover-color: #8b0000;
   --main-transition: 0.3s;
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   /* Register and Login Responsive */
   .register-form,
   .login-form {
@@ -58,7 +58,7 @@
     gap: 15px;
   }
 }
-@media (min-width: 769px) {
+@media (min-width: 801px) {
   .nav-menu-alt {
     display: none !important;
   }
