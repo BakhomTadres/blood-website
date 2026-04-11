@@ -171,7 +171,7 @@ if (page === "add.html") {
   nameDonor.value = localStorage.getItem("name") || "";
   citySelect.value = localStorage.getItem("city") || "قنا";
   emailDonor.value = localStorage.getItem("email") || "";
-  bloodGroup.value = localStorage.getItem("bloodGroup") || "A+";
+  bloodGroup.value = localStorage.getItem("bloodGroup") || "+A";
   phoneDonor.value = localStorage.getItem("phone") || "";
   addressDonor.value = localStorage.getItem("address") || "";
 
