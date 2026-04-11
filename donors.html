@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>المتبرعون</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body dir="rtl">
+    <header class="main-header">
+      <nav class="nav-menu-alt">
+        <ul>
+          <li><a href="home.html" class="active">الرئيسية</a></li>
+          <li><a href="about.html">لماذا نتبرع؟</a></li>
+          <li><a href="add.html">اضافة متبرع</a></li>
+          <li><a href="donors.html">ابحث عن متبرع</a></li>
+          <li><a href="details.html">التفاصيل</a></li>
+        </ul>
+      </nav>
+      <div class="container">
+        <!-- اللوجو واسم المنصة -->
+        <div class="logo-section">
+          <div class="bar"><i class="fa-solid fa-bars"></i></div>
+          <div class="logo">
+            <i class="fa-solid fa-droplet"></i>
+          </div>
+          <div class="logo-text">
+            <h1>نبض العطاء</h1>
+            <span>منصة تبرع بالدم</span>
+          </div>
+        </div>
+
+        <!-- القائمة الرئيسية -->
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="home.html" class="active">الرئيسية</a></li>
+            <li><a href="about.html">لماذا نتبرع؟</a></li>
+            <li><a href="add.html">اضافة متبرع</a></li>
+            <li><a href="donors.html">ابحث عن متبرع</a></li>
+            <li><a href="details.html">التفاصيل</a></li>
+          </ul>
+        </nav>
+        <!-- زر العمل (Action Button) -->
+        <div class="header-action">
+          <a href="login.html" class="btn-register">تسجيل الخروج</a>
+        </div>
+      </div>
+    </header>
+
+    <h1 class="donors-title">قائمة المتبرعين</h1>
+    <div class="search">
+      <div>
+        فصيلة الدم:
+        <select name="blood-group" id="blood-group-donors">
+          <option value="الكل">الكل</option>
+          <option value="A+">+A</option>
+          <option value="A-">-A</option>
+          <option value="B+">+B</option>
+          <option value="B-">-B</option>
+          <option value="AB+">+AB</option>
+          <option value="AB-">-AB</option>
+          <option value="O+">+O</option>
+          <option value="O-">-O</option>
+        </select>
+      </div>
+      <div>
+        المجافظة:
+        <select name="city" id="city-donors">
+          <option value="الكل" selected>الكل</option>
+          <option value="القاهرة">القاهرة</option>
+          <option value="الإسكندرية">الإسكندرية</option>
+          <option value="بورسعيد">بورسعيد</option>
+          <option value="السويس">السويس</option>
+          <option value="الجيزة">الجيزة</option>
+          <option value="دمياط">دمياط</option>
+          <option value="الدقهلية">الدقهلية</option>
+          <option value="الشرقية">الشرقية</option>
+          <option value="القليوبية">القليوبية</option>
+          <option value="كفر الشيخ">كفر الشيخ</option>
+          <option value="الغربية">الغربية</option>
+          <option value="المنوفية">المنوفية</option>
+          <option value="البحيرة">البحيرة</option>
+          <option value="الإسماعيلة">الإسماعيلة</option>
+          <option value="بني سويف">بني سويف</option>
+          <option value="الفيوم">الفيوم</option>
+          <option value="المنيا">المنيا</option>
+          <option value="أسيوط">أسيوط</option>
+          <option value="سوهاج">سوهاج</option>
+          <option value="قنا">قنا</option>
+          <option value="الأقصر">الأقصر</option>
+          <option value="أسوان">أسوان</option>
+          <option value="البحر الأحمر">البحر الأحمر</option>
+          <option value="الوادي الجديد">الوادي الجديد</option>
+          <option value="مطروح">مطروح</option>
+          <option value="شمال سيناء">شمال سيناء</option>
+          <option value="جنوب سيناء">جنوب سيناء</option>
+        </select>
+      </div>
+      <button class="search-btn">بحث</button>
+    </div>
+    <h1 style="margin: 10px 0; text-align: center">المتبرعون المتاحون</h1>
+    <div class="tasks"></div>
+    <script src="main.js"></script>
+  </body>
+</html>

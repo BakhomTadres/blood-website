@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>التسجيل</title>
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body dir="rtl" class="register-body">
+    <div class="register-overlay"></div>
+    <form class="register-form" action="">
+      <h1>التسجيل</h1>
+      <input type="text" placeholder="ادخل اسمك" class="name-input" required />
+      <p class="name-error"></p>
+      <input
+        type="email"
+        name="mail"
+        id=""
+        placeholder="ادخل الايميل الخاص بك"
+        class="email-input"
+        required
+      />
+      <p class="email-error"></p>
+      <select name="city" id="city">
+        <option value="القاهرة">القاهرة</option>
+        <option value="الإسكندرية">الإسكندرية</option>
+        <option value="بورسعيد">بورسعيد</option>
+        <option value="السويس">السويس</option>
+        <option value="الجيزة">الجيزة</option>
+        <option value="دمياط">دمياط</option>
+        <option value="الدقهلية">الدقهلية</option>
+        <option value="الشرقية">الشرقية</option>
+        <option value="القليوبية">القليوبية</option>
+        <option value="كفر الشيخ">كفر الشيخ</option>
+        <option value="الغربية">الغربية</option>
+        <option value="المنوفية">المنوفية</option>
+        <option value="البحيرة">البحيرة</option>
+        <option value="الإسماعيلة">الإسماعيلة</option>
+        <option value="بني سويف">بني سويف</option>
+        <option value="الفيوم">الفيوم</option>
+        <option value="المنيا">المنيا</option>
+        <option value="أسيوط">أسيوط</option>
+        <option value="سوهاج">سوهاج</option>
+        <option value="قنا" selected>قنا</option>
+        <option value="الأقصر">الأقصر</option>
+        <option value="أسوان">أسوان</option>
+        <option value="البحر الأحمر">البحر الأحمر</option>
+        <option value="الوادي الجديد">الوادي الجديد</option>
+        <option value="مطروح">مطروح</option>
+        <option value="شمال سيناء">شمال سيناء</option>
+        <option value="جنوب سيناء">جنوب سيناء</option>
+      </select>
+      <input
+        type="password"
+        name="pass"
+        id=""
+        placeholder=" ادخل كلمة السر"
+        class="pass-input"
+      />
+      <p class="pass-error"></p>
+      <button class="register-btn">التسجيل</button>
+    </form>
+    <script src="main.js"></script>
+  </body>
+</html>

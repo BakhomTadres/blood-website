@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تسجيل الدخول</title>
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body dir="rtl" class="login-body">
+    <div class="login-overlay"></div>
+    <form class="login-form" action="">
+      <h1>تسجيل الدخول</h1>
+      <input
+        type="email"
+        name="mail"
+        id=""
+        placeholder="ادخل الايميل الخاص بك"
+        class="email-login-input"
+        required
+      />
+      <p class="email-login-error"></p>
+      <input
+        type="password"
+        name="pass"
+        id=""
+        placeholder="ادخل كلمة السر الخاصة بك"
+        class="pass-login-input"
+        required
+      />
+      <p class="pass-error"></p>
+      <div class="buttons">
+        <button class="login-btn">تسجيل الدخول</button>
+        <button
+          class="second-btn"
+          onclick="location.href = 'index.html'"
+          style="background-color: #fff; color: var(--main-color)"
+        >
+          التسجيل
+        </button>
+      </div>
+    </form>
+    <script src="main.js"></script>
+  </body>
+</html>
