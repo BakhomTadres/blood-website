@@ -290,7 +290,7 @@
 .register-form button {
   position: relative;
   right: 50%;
-  transform: translate(calc(50% + 10px));
+  transform: translate(50%);
 }
 .register-form button:hover,
 .login-form button:hover {
