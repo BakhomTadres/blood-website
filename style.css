@@ -78,6 +78,9 @@
     min-height: fit-content !important;
   }
   /* Footer Responsive */
+  .main-footer {
+    background-size: 100% !important;
+  }
   .footer-container {
     flex-direction: column;
     text-align: center;
@@ -1041,27 +1044,14 @@ textarea {
 /* Start Footer */
 .main-footer {
   background-color: #ffffff;
+  background-image: url("images/footer.jpg");
+  background-repeat: no-repeat;
+  background-size: 40%;
   padding: 40px 0 20px 0;
   border-top: 5px solid var(--main-color); /* الخط الأحمر العلوي */
   direction: rtl;
   position: relative;
   overflow: hidden;
-}
-
-/* إضافة شكل قطرة الدم كخلفية (اختياري لمحاكاة الصورة) */
-.main-footer::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 150px;
-  height: 150px;
-  background: radial-gradient(
-    circle at bottom left,
-    rgba(179, 0, 0, 0.1),
-    transparent
-  );
-  z-index: 0;
 }
 
 .footer-container {
