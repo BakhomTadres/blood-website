@@ -87,6 +87,7 @@
   }
   .footer-column ul {
     list-style: none;
+    margin-right: 0 !important;
   }
 }
 @media (min-width: 801px) {
