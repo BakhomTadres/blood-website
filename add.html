@@ -4,7 +4,9 @@
   <head>
     <meta charset="UTF-8" />
     <title>إضافة متبرع</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <!-- CSS File -->
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -15,13 +17,13 @@
     />
   </head>
 
-  <body style="padding: 50px 0;">
+  <body style="padding: 80px 0 0; background: #fafafa">
     <header class="main-header">
       <nav class="nav-menu-alt">
         <ul>
-          <li><a href="home.html" class="active">الرئيسية</a></li>
+          <li><a href="home.html">الرئيسية</a></li>
           <li><a href="about.html">لماذا نتبرع؟</a></li>
-          <li><a href="add.html">اضافة متبرع</a></li>
+          <li><a href="add.html" class="active">اضافة متبرع</a></li>
           <li><a href="donors.html">ابحث عن متبرع</a></li>
           <li><a href="details.html">التفاصيل</a></li>
         </ul>
@@ -42,9 +44,9 @@
         <!-- القائمة الرئيسية -->
         <nav class="nav-menu">
           <ul>
-            <li><a href="home.html" class="active">الرئيسية</a></li>
+            <li><a href="home.html">الرئيسية</a></li>
             <li><a href="about.html">لماذا نتبرع؟</a></li>
-            <li><a href="add.html">اضافة متبرع</a></li>
+            <li><a href="add.html" class="active">اضافة متبرع</a></li>
             <li><a href="donors.html">ابحث عن متبرع</a></li>
             <li><a href="details.html">التفاصيل</a></li>
           </ul>
@@ -59,7 +61,7 @@
 
     <div class="form-container">
       <h2 class="form-title">إضافة متبرع جديد</h2>
-
+      <div class="background-shapes"></div>
       <form>
         <!--البيانات الشخصية-->
         <div class="section">
@@ -173,6 +175,44 @@
         </div>
       </form>
     </div>
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>الرئيسية</h3>
+          <ul>
+            <li><a href="home.html">الرئيسية</a></li>
+            <li><a href="about.html">أهدافنا من التطوع</a></li>
+            <li><a href="add.html">اضافة متبرع</a></li>
+            <li><a href="donors.html">بحث عن متبرع</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>المزيد</h3>
+          <ul class="contact-info">
+            <li><i class="fas fa-map-marker-alt"></i>1122001000</li>
+            <li><i class="fas fa-phone"></i>966-5553-1445+</li>
+            <li><i class="fas fa-envelope"></i>mail@nabonox.com</li>
+            <li><i class="fas fa-globe"></i>nabonox.com</li>
+          </ul>
+        </div>
+
+        <div class="footer-column brand-section">
+          <button class="register-btn" onclick="location.href = 'add.html'">
+            سجل كمتبرع
+          </button>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>منصة نبض (Nabonox) 2026 ©</p>
+      </div>
+    </footer>
     <script src="main.js"></script>
   </body>
 </html>

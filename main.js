@@ -5,7 +5,6 @@ let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 //  Register Page
 if (page === "" || page === "index.html") {
   // Variables
-  console.log(page)
   let registerForm = document.querySelector(".register-form");
   let registerBtn = document.querySelector(".register-btn");
   let nameInput = document.querySelector(".name-input");
@@ -19,6 +18,22 @@ if (page === "" || page === "index.html") {
   emailInput.value = localStorage.getItem("email") || "";
   cityRegister.value = localStorage.getItem("city") || "قنا";
   passwordInput.value = localStorage.getItem("password") || "";
+
+  //   Login Variables
+  let loginBtn = document.querySelector(".login-btn");
+  // Login Button
+  loginBtn.onclick = (e) => {
+    e.preventDefault();
+    location.href = "login.html";
+  };
+
+  // Enter button
+  document.body.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      registerBtn.click();
+    }
+  });
 
   //  Registeration Process
   registerBtn.onclick = (e) => {
@@ -56,11 +71,6 @@ if (page === "" || page === "index.html") {
         passwordError.textContent = "";
       }
     }
-
-    nameInput.value = "";
-    emailInput.value = "";
-    cityRegister.value = "قنا";
-    passwordInput.value = "";
   };
 
   cityRegister.onchange = () => {
@@ -78,6 +88,17 @@ if (page === "" || page === "index.html") {
   passwordInput.oninput = () => {
     localStorage.setItem("password", passwordInput.value);
   };
+  //   Change Input
+  let eyeIcon = document.querySelector(".eye-icon");
+  eyeIcon.onclick = () => {
+    if (eyeIcon.innerHTML === `<i class="fa-solid fa-eye"></i>`) {
+      passwordInput.type = "text";
+      eyeIcon.innerHTML = `<i class="fa-solid fa-eye-slash"></i>`;
+    } else if (eyeIcon.innerHTML === `<i class="fa-solid fa-eye-slash"></i>`) {
+      passwordInput.type = "password";
+      eyeIcon.innerHTML = `<i class="fa-solid fa-eye"></i>`;
+    }
+  };
 }
 // Login Page
 if (page === "login.html") {
@@ -89,6 +110,13 @@ if (page === "login.html") {
   let emailError = document.querySelector(".email-login-error");
   let passwordError = document.querySelector(".pass-error");
 
+  // Enter button
+  document.body.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      loginBtn.click();
+    }
+  });
   //  Login Process
   loginBtn.onclick = (e) => {
     e.preventDefault();
@@ -110,7 +138,7 @@ if (page === "login.html") {
         loginForm.style.minHeight = "400px";
         emailError.textContent = "الايميل غير موجود";
       } else {
-        loginForm.style.minHeight = "420px";
+        loginForm.style.minHeight = "400px";
         emailError.textContent = "";
       }
 
@@ -124,8 +152,33 @@ if (page === "login.html") {
       }
     }
   };
+  //   Change Input
+  let eyeIcon = document.querySelector(".eye-icon");
+  eyeIcon.onclick = () => {
+    if (eyeIcon.innerHTML === `<i class="fa-solid fa-eye"></i>`) {
+      passwordInput.type = "text";
+      eyeIcon.innerHTML = `<i class="fa-solid fa-eye-slash"></i>`;
+    } else if (eyeIcon.innerHTML === `<i class="fa-solid fa-eye-slash"></i>`) {
+      passwordInput.type = "password";
+      eyeIcon.innerHTML = `<i class="fa-solid fa-eye"></i>`;
+    }
+  };
 }
 if (page === "home.html") {
+  //   bars
+  let bars = document.querySelector(".bar");
+  let nav = document.querySelector(".nav-menu-alt");
+  bars.onclick = () => {
+    if (bars.innerHTML == `<i class="fa-solid fa-bars"></i>`) {
+      nav.style.display = "block";
+      bars.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
+    } else {
+      nav.style.display = "none";
+      bars.innerHTML = `<i class="fa-solid fa-bars"></i>`;
+    }
+  };
+}
+if (page === "about.html") {
   //   bars
   let bars = document.querySelector(".bar");
   let nav = document.querySelector(".nav-menu-alt");
@@ -154,6 +207,14 @@ if (page === "add.html") {
   let nameError = document.querySelector(".name-error");
   let maleInput = document.querySelector(".male");
   let femaleInput = document.querySelector(".female");
+
+  // Enter button
+  document.body.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      saveBtn.click();
+    }
+  });
 
   //   bars
   let bars = document.querySelector(".bar");
@@ -251,6 +312,14 @@ if (page === "donors.html") {
   let searchBtn = document.querySelector(".search-btn");
   let tasksList = document.querySelector(".tasks");
 
+  // Enter button
+  document.body.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      searchBtn.click();
+    }
+  });
+
   //   bars
   let bars = document.querySelector(".bar");
   let nav = document.querySelector(".nav-menu-alt");
@@ -344,5 +413,19 @@ if (page === "donors.html") {
 
   bloodGroupFilter.onchange = () => {
     localStorage.setItem("bloodGroupFilter", bloodGroupFilter.value);
+  };
+}
+if (page === "details.html") {
+  //   bars
+  let bars = document.querySelector(".bar");
+  let nav = document.querySelector(".nav-menu-alt");
+  bars.onclick = () => {
+    if (bars.innerHTML == `<i class="fa-solid fa-bars"></i>`) {
+      nav.style.display = "block";
+      bars.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
+    } else {
+      nav.style.display = "none";
+      bars.innerHTML = `<i class="fa-solid fa-bars"></i>`;
+    }
   };
 }

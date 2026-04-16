@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>التسجيل</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- CSS File -->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -51,15 +59,30 @@
         <option value="شمال سيناء">شمال سيناء</option>
         <option value="جنوب سيناء">جنوب سيناء</option>
       </select>
-      <input
-        type="password"
-        name="pass"
-        id=""
-        placeholder=" ادخل كلمة السر"
-        class="pass-input"
-      />
-      <p class="pass-error"></p>
-      <button class="register-btn">التسجيل</button>
+      <div class="pass-field">
+        <input
+          type="password"
+          name="pass"
+          id=""
+          placeholder=" ادخل كلمة السر"
+          class="pass-input"
+        />
+        <div class="eye-icon"><i class="fa-solid fa-eye"></i></div>
+        <p class="pass-error"></p>
+      </div>
+      <div class="buttons">
+        <button class="register-btn">التسجيل</button>
+        <button
+          class="login-btn"
+          style="
+            background-color: #fff;
+            color: var(--main-color);
+            margin-bottom: 20px;
+          "
+        >
+          تسجيل الدخول
+        </button>
+      </div>
     </form>
     <script src="main.js"></script>
   </body>

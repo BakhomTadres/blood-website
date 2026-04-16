@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>نبض العطاء</title>
+    <title>لماذا نتبرع؟</title>
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
     <!-- CSS File -->
     <link rel="stylesheet" href="style.css" />
@@ -15,17 +15,15 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body style="padding: 80px 0 0" dir="rtl">
+  <body class="about-body">
     <header class="main-header">
       <nav class="nav-menu-alt">
         <ul>
-          <li>
-            <a href="home.html" class="active" style="top: 0.5px">الرئيسية</a>
-          </li>
-          <li><a href="about.html" style="top: 0.5px">لماذا نتبرع؟</a></li>
-          <li><a href="add.html" style="top: 0.5px">اضافة متبرع</a></li>
-          <li><a href="donors.html" style="top: 0.5px">ابحث عن متبرع</a></li>
-          <li><a href="details.html" style="top: 0.5px">التفاصيل</a></li>
+          <li><a href="home.html">الرئيسية</a></li>
+          <li><a href="about.html" class="active">لماذا نتبرع؟</a></li>
+          <li><a href="add.html">اضافة متبرع</a></li>
+          <li><a href="donors.html">ابحث عن متبرع</a></li>
+          <li><a href="details.html">التفاصيل</a></li>
         </ul>
       </nav>
       <div class="container">
@@ -44,8 +42,8 @@
         <!-- القائمة الرئيسية -->
         <nav class="nav-menu">
           <ul>
-            <li><a href="home.html" class="active">الرئيسية</a></li>
-            <li><a href="about.html">لماذا نتبرع؟</a></li>
+            <li><a href="home.html">الرئيسية</a></li>
+            <li><a href="about.html" class="active">لماذا نتبرع؟</a></li>
             <li><a href="add.html">اضافة متبرع</a></li>
             <li><a href="donors.html">ابحث عن متبرع</a></li>
             <li><a href="details.html">التفاصيل</a></li>
@@ -59,21 +57,63 @@
       </div>
     </header>
 
-    <section class="home">
-      <div class="overlay">
-        <h1>تبرّع <span>بالدّم</span>، أنقذ حياةً</h1>
-        <h3>كن سببًا في شفاء آخرين</h3>
-        <br />
-        <div class="buttons">
-          <button onclick="location.href = 'add.html'" class="btn primary">
-            سجّل كمتبرع
-          </button>
-          <button onclick="location.href = 'donors.html'" class="btn outline">
-            اطلب متبرعًا
-          </button>
+    <div class="background-shapes"></div>
+    <div class="about-container">
+      <div class="about-images">
+        <div class="img-box">
+          <h4>Before</h4>
+          <img src="images/before.jpg" />
+        </div>
+        <div class="img-box">
+          <h4>After</h4>
+          <img src="images/after.jpg" />
+          <div class="dot"></div>
         </div>
       </div>
-    </section>
+      <div class="content">
+        <div class="about-card big">
+          <h2>"الفكره الاساسية:"</h2>
+          <span>OUR STORY AND OUR MESSAGE</span>
+          <p>
+            محمود شاب في بداية العشرينات من عمره عمل حادثة كبيرة جدًا وللأسف أدت
+            لفقد كبير جدًا من الدم بتاعه <br />
+            والمشكلة الأكبر اللي واجهته ان فصيلة دمه للأسف (A-) ودي من فصائل
+            الدم النادرة جدًا<br />
+            لكن بفضل الله ثم الويب ابلكيشن تم الحصول علي فصيلة الدم النادرة
+            <br />
+            وهو بصحة جيدة جدا و بنشاط كبير <br />
+          </p>
+        </div>
+        <div class="about-row">
+          <div class="about-card small">
+            <h3>اهدافنا :</h3>
+            <ul>
+              <li>نشر الوعي</li>
+              <li>إنقاذ حياة</li>
+              <li>تشجيع التبرع</li>
+            </ul>
+          </div>
+          <div class="about-card small">
+            <h3>المراد تحقيقه:</h3>
+            <ul>
+              <li>مجتمع متعاون</li>
+              <li>وصول أسرع</li>
+              <li>توفير الفصائل</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="about-card vision">
+          <div class="text">
+            <h3>الهدف الرئيسي :</h3>
+            <p>نربط المتبرع بالمحتاج بسرعة وكفاءة</p>
+          </div>
+          <div class="about-icon">
+            <i class="fas fa-handshake"></i>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer class="main-footer">
       <div class="footer-container">
         <div class="footer-column">
