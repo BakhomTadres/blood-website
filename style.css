@@ -234,7 +234,7 @@
   width: 100%;
 }
 .nav-menu-alt ul li a:hover {
-  color: var(--hover-color);
+  color: var(--main-color);
   font-weight: 700;
 }
 /* زر سجل كمتبرع */
