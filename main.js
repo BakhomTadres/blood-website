@@ -14,10 +14,6 @@ if (page === "" || page === "index.html") {
   let emailError = document.querySelector(".email-error");
   let passwordError = document.querySelector(".pass-error");
 
-  nameInput.value = localStorage.getItem("name") || "";
-  emailInput.value = localStorage.getItem("email") || "";
-  cityRegister.value = localStorage.getItem("city") || "قنا";
-  passwordInput.value = localStorage.getItem("password") || "";
 
   //   Login Variables
   let loginBtn = document.querySelector(".login-btn");
