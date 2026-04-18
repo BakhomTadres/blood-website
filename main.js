@@ -225,12 +225,9 @@ if (page === "add.html") {
     }
   };
 
-  nameDonor.value = localStorage.getItem("name") || "";
   citySelect.value = localStorage.getItem("city") || "قنا";
   emailDonor.value = localStorage.getItem("email") || "";
   bloodGroup.value = localStorage.getItem("bloodGroup") || "+A";
-  phoneDonor.value = localStorage.getItem("phone") || "";
-  addressDonor.value = localStorage.getItem("address") || "";
 
   if (localStorage.getItem("gender") == "male") {
     maleInput.checked = true;
@@ -418,7 +415,7 @@ if (page === "details.html") {
   bars.onclick = () => {
     if (bars.innerHTML == `<i class="fa-solid fa-bars"></i>`) {
       nav.style.display = "block";
-      bars.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
+      bars.innerHTML = `<i class="fa-solid fa-xmark" style="font-size: 30px;"></i>`;
     } else {
       nav.style.display = "none";
       bars.innerHTML = `<i class="fa-solid fa-bars"></i>`;
