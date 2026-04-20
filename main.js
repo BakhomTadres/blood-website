@@ -250,7 +250,7 @@ if (page === "add.html") {
     e.preventDefault();
     if (
       nameDonor.value != "" &&
-      phoneDonor.value != "" &&
+      phoneDonor.value.length == 11 &&
       addressDonor.value != ""
     ) {
       let task = {
