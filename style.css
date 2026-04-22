@@ -599,17 +599,6 @@
 
   background-size: 60px 60px;
 }
-.about-body::after {
-  content: "";
-  position: fixed;
-  right: 80px;
-  bottom: 120px;
-  width: 120px;
-  height: 120px;
-  background: var(--main-color);
-  border-radius: 25px;
-  z-index: -1;
-}
 /* End About */
 
 /* Start Add Donor Page */

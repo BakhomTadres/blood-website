@@ -7,6 +7,9 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
     <!-- CSS File -->
     <link rel="stylesheet" href="style.css" />
+    <!-- AOS File -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -60,18 +63,18 @@
     <div class="background-shapes"></div>
     <div class="about-container">
       <div class="about-images">
-        <div class="img-box">
+        <div class="img-box" data-aos="fade-up">
           <h4>Before</h4>
           <img src="images/before.jpg" />
         </div>
-        <div class="img-box">
+        <div class="img-box" data-aos="fade-up">
           <h4>After</h4>
           <img src="images/after.jpg" />
           <div class="dot"></div>
         </div>
       </div>
       <div class="content">
-        <div class="about-card big">
+        <div class="about-card big" data-aos="fade-up">
           <h2>"الفكره الاساسية:"</h2>
           <span>OUR STORY AND OUR MESSAGE</span>
           <p>
@@ -85,7 +88,7 @@
           </p>
         </div>
         <div class="about-row">
-          <div class="about-card small">
+          <div class="about-card small" data-aos="fade-up">
             <h3>اهدافنا :</h3>
             <ul>
               <li>نشر الوعي</li>
@@ -93,7 +96,7 @@
               <li>تشجيع التبرع</li>
             </ul>
           </div>
-          <div class="about-card small">
+          <div class="about-card small" data-aos="fade-up">
             <h3>المراد تحقيقه:</h3>
             <ul>
               <li>مجتمع متعاون</li>
@@ -103,7 +106,7 @@
           </div>
         </div>
 
-        <div class="about-card vision">
+        <div class="about-card vision" data-aos="fade-up">
           <div class="text">
             <h3>الهدف الرئيسي :</h3>
             <p>نربط المتبرع بالمحتاج بسرعة وكفاءة</p>
@@ -153,6 +156,10 @@
         <p>منصة نبض (Nabonox) 2026 ©</p>
       </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="main.js"></script>
   </body>
 </html>

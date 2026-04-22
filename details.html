@@ -11,6 +11,8 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
     <!-- CSS File -->
     <link rel="stylesheet" href="style.css" />
+    <!-- AOS File -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body dir="rtl" style="background-color: #f8f8f8; padding: 80px 0 0">
     <header class="main-header">
@@ -58,7 +60,7 @@
 
     <!-- 🔴 كروت الإحصائيات -->
     <div class="stats-container">
-      <div class="stats-card stat">
+      <div class="stats-card stat" data-aos="fade-up">
         <div class="stats-card-content">
           <div class="stats-icon">
             <i class="fa-solid fa-heart"></i>
@@ -70,7 +72,7 @@
         </div>
       </div>
 
-      <div class="stats-card stat">
+      <div class="stats-card stat" data-aos="fade-up">
         <div class="stats-card-content">
           <div class="stats-icon">
             <i class="fa-solid fa-phone"></i>
@@ -82,7 +84,7 @@
         </div>
       </div>
 
-      <div class="stats-card stat">
+      <div class="stats-card stat" data-aos="fade-up">
         <div class="stats-card-content">
           <div class="stats-icon">
             <i class="fa-solid fa-user"></i>
@@ -98,7 +100,7 @@
     <!-- 🔴 الصف التاني -->
     <div class="stats-container-second">
       <!-- 🩸 كارت فصائل الدم -->
-      <div class="stats-card stats-blood-card">
+      <div class="stats-card stats-blood-card" data-aos="fade-up">
         <div class="title">فصائل الدم المطلوبة الآن:</div>
 
         <div class="grid">
@@ -137,7 +139,7 @@
       </div>
 
       <!-- 🗺️ كارت الخريطة -->
-      <div class="stats-card map-card">
+      <div class="stats-card map-card" data-aos="fade-up">
         <div class="title">أقرب مواقع التبرع</div>
 
         <div class="map-container">
@@ -195,6 +197,10 @@
         <p>منصة نبض (Nabonox) 2026 ©</p>
       </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="main.js"></script>
   </body>
 </html>

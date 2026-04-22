@@ -14,7 +14,6 @@ if (page === "" || page === "index.html") {
   let emailError = document.querySelector(".email-error");
   let passwordError = document.querySelector(".pass-error");
 
-
   //   Login Variables
   let loginBtn = document.querySelector(".login-btn");
   // Login Button
@@ -331,7 +330,7 @@ if (page === "donors.html") {
 
   let newTasks = tasks.map((task) => {
     return `
-        <div class="card">
+        <div class="card" data-aos="fade-up">
           <div class="card-header">
           <div class="profile"> 
                 <i class="fa-solid fa-circle-user"></i>
