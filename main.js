@@ -330,7 +330,7 @@ if (page === "donors.html") {
 
   let newTasks = tasks.map((task) => {
     return `
-        <div class="card" data-aos="fade-up">
+        <div class="card">
           <div class="card-header">
           <div class="profile"> 
                 <i class="fa-solid fa-circle-user"></i>
