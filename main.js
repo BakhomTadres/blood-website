@@ -200,6 +200,7 @@ if (page === "add.html") {
   let phoneError = document.querySelector(".phone-error");
   let addressError = document.querySelector(".address-error");
   let nameError = document.querySelector(".name-error");
+  let emailError = document.querySelector(".email-error");
   let maleInput = document.querySelector(".male");
   let femaleInput = document.querySelector(".female");
 
@@ -250,22 +251,42 @@ if (page === "add.html") {
     if (
       nameDonor.value != "" &&
       phoneDonor.value.length == 11 &&
-      addressDonor.value != ""
+      addressDonor.value != "" &&
+      emailDonor.value.includes("@") &&
+      (phoneDonor.value.startsWith("012") ||
+        phoneDonor.value.startsWith("011") ||
+        phoneDonor.value.startsWith("010") ||
+        phoneDonor.value.startsWith("015"))
     ) {
       let task = {
         name: nameDonor.value,
         address: addressDonor.value,
         city: citySelect.value,
         phone: phoneDonor.value,
+        email: emailDonor.value,
         gender: localStorage.getItem("gender"),
         bloodGroup: bloodGroup.value,
       };
       tasks.push(task);
       localStorage.setItem("tasks", JSON.stringify(tasks));
+
+      // Refreshing data
+      nameDonor.value = "";
+      emailDonor.value = "";
+      phoneDonor.value = "";
+      addressDonor.value = "";
+
       location.href = "donors.html";
     } else {
       if (phoneDonor.value.length != 11) {
         phoneError.textContent = "ادخل رقم التليفون الخاص بك 11 رقم";
+      } else if (
+        !phoneDonor.value.startsWith("012") &&
+        !phoneDonor.value.startsWith("011") &&
+        !phoneDonor.value.startsWith("010") &&
+        !phoneDonor.value.startsWith("015")
+      ) {
+        phoneError.textContent = "ادخل رقم التليفون الخاص بك صحيح";
       } else {
         phoneError.textContent = "";
       }
@@ -278,6 +299,13 @@ if (page === "add.html") {
         nameError.textContent = "ادخل اسمك";
       } else {
         nameError.textContent = "";
+      }
+      if (emailDonor.value == "") {
+        emailError.textContent = "من فضلك ادخل ايميلك";
+      } else if (!emailDonor.value.includes("@")) {
+        emailError.textContent = "من فضلك ادخل ايميلك و تحتوي علي @";
+      } else {
+        emailError.textContent = "";
       }
     }
   };
@@ -342,6 +370,7 @@ if (page === "donors.html") {
           <h3>${task.gender == "male" ? "ذكر" : "انثى"}</h3>
             <p class="address"><i class="fa-solid fa-location-dot"></i> ${task.city} , ${task.address}</p>
             <p class="phone"><i class="fa-solid fa-phone"></i> ${task.phone}</p>
+            <a href="mailto:${task.email}" class="mail"><i class="fa-solid fa-envelope"></i> ${task.email}</a>
           </div>
           <button class="contact-btn" onclick="location.href='tel:${task.phone}'">تواصل معه</button>
         </div>

@@ -10,6 +10,7 @@
   --hover-color: #8b0000;
   --main-transition: 0.3s;
 }
+/* Responsive */
 @media (max-width: 800px) {
   /* Register and Login Responsive */
   .register-form,
@@ -279,6 +280,7 @@
   color: #fff !important;
 }
 /* End Header */
+
 /* Start Register and Login */
 .register-body,
 .login-body {
@@ -394,6 +396,7 @@
   margin-right: 10px;
 }
 /* End Register and Login */
+
 /* Start Home Page */
 .home {
   height: calc(100vh - 80px);
@@ -720,6 +723,7 @@ textarea {
   transform: scale(1.05);
 }
 /* End Add Donor Page */
+
 /* Start Donors Page */
 .donors-title {
   text-align: center;
@@ -803,8 +807,10 @@ textarea {
   color: #555;
 }
 .address i,
-.phone i {
+.phone i,
+.mail i {
   color: var(--main-color);
+  margin-left: 10px;
 }
 /* button */
 .contact-btn {
