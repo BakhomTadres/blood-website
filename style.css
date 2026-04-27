@@ -759,7 +759,7 @@ textarea {
   background-color: var(--hover-color);
   transform: scale(1.05);
 }
-.tasks {
+.donors {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   background-color: var(--main-color);

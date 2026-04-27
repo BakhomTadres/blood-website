@@ -1,7 +1,7 @@
 const page = window.location.pathname.split("/").pop();
 
 let cityRegister = document.getElementById("city");
-let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+let donors = JSON.parse(localStorage.getItem("donors")) || [];
 //  Register Page
 if (page === "" || page === "index.html") {
   // Variables
@@ -258,7 +258,7 @@ if (page === "add.html") {
         phoneDonor.value.startsWith("010") ||
         phoneDonor.value.startsWith("015"))
     ) {
-      let task = {
+      let donor = {
         name: nameDonor.value,
         address: addressDonor.value,
         city: citySelect.value,
@@ -267,8 +267,8 @@ if (page === "add.html") {
         gender: localStorage.getItem("gender"),
         bloodGroup: bloodGroup.value,
       };
-      tasks.push(task);
-      localStorage.setItem("tasks", JSON.stringify(tasks));
+      donors.push(donor);
+      localStorage.setItem("donors", JSON.stringify(donors));
 
       // Refreshing data
       nameDonor.value = "";
@@ -286,7 +286,7 @@ if (page === "add.html") {
         !phoneDonor.value.startsWith("010") &&
         !phoneDonor.value.startsWith("015")
       ) {
-        phoneError.textContent = "ادخل رقم التليفون الخاص بك صحيح";
+        phoneError.textContent = "ادخل رقم التليفون الخاص بك بشكل صحيح";
       } else {
         phoneError.textContent = "";
       }
@@ -330,7 +330,7 @@ if (page === "donors.html") {
   let cityFilter = document.getElementById("city-donors");
   let bloodGroupFilter = document.getElementById("blood-group-donors");
   let searchBtn = document.querySelector(".search-btn");
-  let tasksList = document.querySelector(".tasks");
+  let donorsList = document.querySelector(".donors");
 
   // Enter button
   document.body.addEventListener("keypress", (e) => {
@@ -356,77 +356,77 @@ if (page === "donors.html") {
   cityFilter.value = localStorage.getItem("cityFilter") || "الكل";
   bloodGroupFilter.value = localStorage.getItem("bloodGroupFilter") || "الكل";
 
-  let newTasks = tasks.map((task) => {
+  let newDonors = donors.map((donor) => {
     return `
         <div class="card">
           <div class="card-header">
           <div class="profile"> 
                 <i class="fa-solid fa-circle-user"></i>
           </div>
-          <span class="blood">${task.bloodGroup}</span>
+          <span class="blood">${donor.bloodGroup}</span>
           </div>
           <div class="card-body">
-          <h3>${task.name}</h3>
-          <h3>${task.gender == "male" ? "ذكر" : "انثى"}</h3>
-            <p class="address"><i class="fa-solid fa-location-dot"></i> ${task.city} , ${task.address}</p>
-            <p class="phone"><i class="fa-solid fa-phone"></i> ${task.phone}</p>
-            <a href="mailto:${task.email}" class="mail"><i class="fa-solid fa-envelope"></i> ${task.email}</a>
+          <h3>${donor.name}</h3>
+          <h3>${donor.gender == "male" ? "ذكر" : "انثى"}</h3>
+            <p class="address"><i class="fa-solid fa-location-dot"></i> ${donor.city} , ${donor.address}</p>
+            <p class="phone"><i class="fa-solid fa-phone"></i> ${donor.phone}</p>
+            <a href="mailto:${donor.email}" class="mail"><i class="fa-solid fa-envelope"></i> ${donor.email}</a>
           </div>
-          <button class="contact-btn" onclick="location.href='tel:${task.phone}'">تواصل معه</button>
+          <button class="contact-btn" onclick="location.href='tel:${donor.phone}'">تواصل معه</button>
         </div>
   `;
   });
   searchBtn.onclick = () => {
-    let tasksFiltered = tasks.filter((task) => {
+    let donorsFiltered = donors.filter((donor) => {
       if (cityFilter.value == "الكل" && bloodGroupFilter.value == "الكل") {
-        return task;
+        return donor;
       } else if (
         cityFilter.value == "الكل" &&
         bloodGroupFilter.value != "الكل"
       ) {
-        return task.bloodGroup == bloodGroupFilter.value;
+        return donor.bloodGroup == bloodGroupFilter.value;
       } else if (
         cityFilter.value != "الكل" &&
         bloodGroupFilter.value == "الكل"
       ) {
-        return task.city == cityFilter.value;
+        return donor.city == cityFilter.value;
       } else {
         return (
-          task.city == cityFilter.value &&
-          task.bloodGroup == bloodGroupFilter.value
+          donor.city == cityFilter.value &&
+          donor.bloodGroup == bloodGroupFilter.value
         );
       }
     });
-    let filteredHtml = tasksFiltered
-      .map((task) => {
+    let filteredHtml = donorsFiltered
+      .map((donor) => {
         return `
         <div class="card">
           <div class="card-header">
           <div class="profile"> 
                 <i class="fa-solid fa-circle-user"></i>
           </div>
-          <span class="blood">${task.bloodGroup}</span>
+          <span class="blood">${donor.bloodGroup}</span>
           </div>
           <div class="card-body">
-          <h3>${task.name}</h3>
-          <h3>${task.gender == "male" ? "ذكر" : "انثى"}</h3>
-            <p class="address"><i class="fa-solid fa-location-dot"></i> ${task.city} , ${task.address}</p>
-            <p class="phone"><i class="fa-solid fa-phone"></i> ${task.phone}</p>
+          <h3>${donor.name}</h3>
+          <h3>${donor.gender == "male" ? "ذكر" : "انثى"}</h3>
+            <p class="address"><i class="fa-solidonor-location-dot"></i> ${donor.city} , ${donor.address}</p>
+            <p class="phone"><i class="fa-solid fa-phone"></i> ${donor.phone}</p>
           </div>
-          <button class="contact-btn" onclick="location.href='tel:${task.phone}'">تواصل معه</button>
+          <button class="contact-btn" onclick="location.href='tel:${donor.phone}'">تواصل معه</button>
         </div>
       `;
       })
       .join("");
 
     if (filteredHtml === "") {
-      tasksList.innerHTML =
+      donorsList.innerHTML =
         "<p class='donors-error'>لا يوجد متبرعين مطابقين للبحث</p>";
     } else {
-      tasksList.innerHTML = filteredHtml;
+      donorsList.innerHTML = filteredHtml;
     }
   };
-  tasksList.innerHTML = newTasks.join("");
+  donorsList.innerHTML = newDonors.join("");
 
   cityFilter.onchange = () => {
     localStorage.setItem("cityFilter", cityFilter.value);
